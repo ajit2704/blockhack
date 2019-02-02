@@ -10,7 +10,7 @@ Skyfall is a physics based game in which users can control an onscreen paddle si
 ## How it Works
 A python application (app.py), detects the player’s hand using the TensorFlow object detection api,  and streams hand coordinates to the game interface — a web application served using FLASK — over websockets.
 
-Hand detection is done using trained models from the [handtracking](https://github.com/victordibia/handtracking) repo. Note that hand detection is done on a frame-by-frame basis and the system does not automatically track hand across frames. However, this type of inter-frame tracking is useful as it can enable multiple user interaction where we need to track a hand across frames (think a bunch of friends waving their hands, each controlling their own paddle). To this end, the current implementation includes [naive euclidean distance](utils/object_id_utils.py) based tracking where hands seen in similar positions across frames are assigned same id.
+Note that hand detection is done on a frame-by-frame basis and the system does not automatically track hand across frames. However, this type of inter-frame tracking is useful as it can enable multiple user interaction where we need to track a hand across frames (think a bunch of friends waving their hands, each controlling their own paddle). To this end, the current implementation includes [naive euclidean distance](utils/object_id_utils.py) based tracking where hands seen in similar positions across frames are assigned same id.
 
 Once each hand in the frame is detected (and a tracking id assigned), the hand coordinates are then sent to a web socket server which sends it out to connected clients.
 
