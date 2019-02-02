@@ -52,4 +52,3 @@ View the game interface (hand control) in your browser - `http://localhost:5005/
 
 To view a simple mouse control version `http://localhost:5005` 
 
-MIT License.
