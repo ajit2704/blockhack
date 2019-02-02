@@ -16,7 +16,6 @@ Once each hand in the frame is detected (and a tracking id assigned), the hand c
 
 The game web interface listens for hand detection data over a web socket. Each detected hand is used to generate a paddle, and the coordinate of the hand in the video frame is used to relatively position the paddle on the game screen.
 
-<img src="static/img/handmap.jpg" width="100%">
 
 # Next Steps/Todo
 
